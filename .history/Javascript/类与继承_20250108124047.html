@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Animal{
+            constructor(name){
+                this.name = name;
+            }
+            speak(){
+                console.log("I am an animal");
+            }
+        }
+        class Dog extends Animal{
+            speak(){
+                console.log("Woof! I am a dog.");
+            }
+        }
+        const animal = new Animal("任意动物");
+        const dog = new Dog("旺财");
+
+    </script>
+</body>
+</html>

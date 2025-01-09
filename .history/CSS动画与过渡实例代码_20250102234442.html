@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS 过渡与动画示例</title>
+
+    <style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            margin: 0;
+
+            padding: 20px;
+
+            background-color: #f9f9f9;
+
+        }
+
+  
+
+        /* 过渡效果 */
+
+        .transition-button {
+
+            padding: 10px 20px;
+
+            font-size: 16px;
+
+            background-color: #4caf50;
+
+            color: white;
+
+            border: none;
+
+            border-radius: 5px;
+
+            cursor: pointer;
+
+            transition: background-color 0.3s, transform 0.3s;
+
+        }
+
+  
+
+        .transition-button:hover {
+
+            background-color: #45a049;
+
+            transform: scale(1.1);
+
+            /* 鼠标悬停时放大 */
+
+        }
+
+  
+
+        /* 动画效果 */
+
+        @keyframes colorChange {
+
+            0% {
+
+                background-color: red;
+
+            }
+
+  
+
+            50% {
+
+                background-color: orange;
+
+            }
+
+  
+
+            100% {
+
+                background-color: yellow;
+
+            }
+
+        }
+
+  
+
+        .animated-box {
+
+            width: 100px;
+
+            height: 100px;
+
+            background-color: red;
+
+            margin: 20px auto;
+
+            animation: colorChange 2s infinite;
+
+            /* 无限循环动画 */
+
+        }
+
+    </style>
+
+</head>
+
+  
+
+<body>
+
+  
+
+    <h1>CSS 过渡与动画示例</h1>
+
+  
+
+    <!-- 过渡效果 -->
+
+    <section>
+
+        <h2>过渡效果</h2>
+
+        <button class="transition-button">鼠标悬停我</button>
+
+    </section>
+
+  
+
+    <!-- 动画效果 -->
+
+    <section>
+
+        <h2>动画效果</h2>
+
+        <div class="animated-box"></div>
+
+    </section>
+
+  
+
+</body>
+
+  
+
+</html>

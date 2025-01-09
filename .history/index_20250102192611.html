@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS 布局与定位示例</title>
+
+    <style>
+
+        /* 全局样式 */
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            margin: 0;
+
+            padding: 20px;
+
+        }
+
+  
+
+        section {
+
+            margin-bottom: 40px;
+
+        }
+
+  
+
+        /* 布局模型 */
+
+        /* 普通流布局 */
+
+        .normal-flow {
+
+            background-color: #f0f8ff;
+
+            padding: 20px;
+
+        }
+
+  
+
+        .normal-flow p {
+
+            margin-bottom: 10px;
+
+        }
+
+  
+
+        /* 浮动布局 */
+
+        .float-layout {
+
+            background-color: #e6e6fa;
+
+            overflow: hidden;
+
+            /* 清除浮动 */
+
+            padding: 20px;
+
+        }
+
+  
+
+        .float-layout div {
+
+            float: left;
+
+            width: 30%;
+
+            margin-right: 3%;
+
+            padding: 10px;
+
+            background-color: #dcdcdc;
+
+            text-align: center;
+
+        }
+
+  
+
+        .float-layout div:last-child {
+
+            margin-right: 0;
+
+        }
+
+  
+
+        /* Flexbox 布局 */
+
+        .flexbox-layout {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            background-color: #ffe4e1;
+
+            padding: 20px;
+
+            gap: 20px;
+
+        }
+
+  
+
+        .flexbox-layout div {
+
+            width: 100px;
+
+            height: 100px;
+
+            background-color: #ffa07a;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            color: white;
+
+            font-weight: bold;
+
+            border-radius: 10px;
+
+        }
+
+  
+
+        /* 定位 */
+
+        /* static 定位 */
+
+        .static-box {
+
+            background-color: #f0f8ff;
+
+            padding: 10px;
+
+            border: 1px solid #888;
+
+        }
+
+  
+
+        /* relative 定位 */
+
+        .relative-box {
+
+            position: relative;
+
+            top: 20px;
+
+            left: 20px;
+
+            background-color: #e6e6fa;
+
+            padding: 10px;
+
+            border: 1px solid #888;
+
+        }
+
+  
+
+        /* absolute 定位 */
+
+        .absolute-box {
+
+            position: absolute;
+
+            top: 50px;
+
+            right: 20px;
+
+            background-color: #ffe4e1;
+
+            padding: 10px;
+
+            border: 1px solid #888;
+
+        }
+
+  
+
+        /* fixed 定位 */
+
+        .fixed-box {
+
+            position: fixed;
+
+            bottom: 20px;
+
+            right: 20px;
+
+            background-color: #fafad2;
+
+            padding: 10px;
+
+            border: 1px solid #888;
+
+        }
+
+  
+
+        /* sticky 定位 */
+
+        .sticky-box {
+
+            position: sticky;
+
+            top: 0;
+
+            background-color: #dcdcdc;
+
+            padding: 10px;
+
+            border: 1px solid #888;
+
+        }
+
+    </style>
+
+</head>
+
+  
+
+<body>
+
+  
+
+    <!-- 布局模型 -->
+
+    <section class="normal-flow">
+
+        <h2>普通流布局</h2>
+
+        <p>段落 1：默认从上到下排列。</p>
+
+        <p>段落 2：继续从上到下排列。</p>
+
+    </section>
+
+  
+
+    <section class="float-layout">
+
+        <h2>浮动布局</h2>
+
+        <div>左边</div>
+
+        <div>中间</div>
+
+        <div>右边</div>
+
+    </section>
+
+  
+
+    <section class="flexbox-layout">
+
+        <h2 style="width: 100%; text-align: center;">Flexbox 布局</h2>
+
+        <div>1</div>
+
+        <div>2</div>
+
+        <div>3</div>
+
+    </section>
+
+  
+
+    <!-- 定位 -->
+
+    <section>
+
+        <h2>static 定位</h2>
+
+        <div class="static-box">这是默认位置的元素（static）。</div>
+
+    </section>
+
+  
+
+    <section>
+
+        <h2>relative 定位</h2>
+
+        <div class="relative-box">我相对自身移动了一点（relative）。</div>
+
+    </section>
+
+  
+
+    <section style="position: relative;">
+
+        <h2>absolute 定位</h2>
+
+        <div class="absolute-box">我绝对定位到容器的右上方（absolute）。</div>
+
+    </section>
+
+  
+
+    <section>
+
+        <h2>fixed 定位</h2>
+
+        <div class="fixed-box">我固定在视口右下角，不会随页面滚动（fixed）。</div>
+
+    </section>
+
+  
+
+    <section style="height: 2000px;">
+
+        <h2>sticky 定位</h2>
+
+        <div class="sticky-box">我会在滚动到顶部时“粘住”！（sticky）。</div>
+
+    </section>
+
+  
+
+</body>
+
+  
+
+</html>

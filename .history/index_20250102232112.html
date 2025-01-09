@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS 定位示例</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    /* 示例容器 */
+    .container {
+      margin-bottom: 40px;
+      border: 1px solid #ccc;
+      padding: 20px;
+      position: relative; /* 作为定位祖先 */
+    }
+
+    /* static 定位（默认） */
+    .static-box {
+      background-color: #f0f8ff;
+      padding: 10px;
+      border: 1px solid #888;
+    }
+
+    /* relative 定位 */
+    .relative-box {
+      position: relative;
+      top: 20px;
+      left: 20px;
+      background-color: #e6e6fa;
+      padding: 10px;
+      border: 1px solid #888;
+    }
+
+    /* absolute 定位 */
+    .absolute-box {
+      position: absolute;
+      top: 50px;
+      right: 20px;
+      background-color: #ffe4e1;
+      padding: 10px;
+      border: 1px solid #888;
+    }
+
+    /* fixed 定位 */
+    .fixed-box {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #fafad2;
+      padding: 10px;
+      border: 1px solid #888;
+    }
+
+    /* sticky 定位 */
+    .sticky-box {
+      position: sticky;
+      top: 0; /* 吸附在页面顶部 */
+      background-color: #dcdcdc;
+      padding: 10px;
+      border: 1px solid #888;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- static 定位 -->
+  <section class="container">
+    <h2>static 定位</h2>
+    <div class="static-box">我是默认位置的元素（static）。</div>
+  </section>
+
+  <!-- relative 定位 -->
+  <section class="container">
+    <h2>relative 定位</h2>
+    <div class="relative-box">我相对自身移动了一点（relative）。</div>
+  </section>
+
+  <!-- absolute 定位 -->
+  <section class="container">
+    <h2>absolute 定位</h2>
+    <div class="absolute-box">我绝对定位到容器的右上方（absolute）。</div>
+  </section>
+
+  <!-- fixed 定位 -->
+  <section class="container">
+    <h2>fixed 定位</h2>
+    <div class="fixed-box">我固定在视口右下角，不会随页面滚动（fixed）。</div>
+  </section>
+
+  <!-- sticky 定位 -->
+  <section class="container" style="height: 2000px;">
+    <h2>sticky 定位</h2>
+    <div class="sticky-box">我会在滚动到顶部时“粘住”！（sticky）。</div>
+  </section>
+
+</body>
+</html>

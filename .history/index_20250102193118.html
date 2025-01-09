@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 常用选择器示例</title>
+    <style>
+        /* 基础选择器 */
+        p {
+            color: blue;
+            /* 标签选择器：选中所有 <p> */
+        }
+
+        .highlight {
+            color: green;
+            /* 类选择器：选中具有类名为 highlight 的元素 */
+        }
+
+        #special {
+            color: red;
+            /* ID 选择器：选中具有 ID 为 special 的元素 */
+        }
+
+        /* 组合选择器 */
+        div p {
+            font-style: italic;
+            /* 后代选择器：选中 <div> 内所有 <p> */
+        }
+
+        div>p {
+            font-weight: bold;
+            /* 子选择器：选中 <div> 的直接子 <p> */
+        }
+
+        /* 伪类选择器 */
+        a:hover {
+            text-decoration: underline;
+            /* 鼠标悬停时添加下划线 */
+        }
+
+        li:nth-child(2) {
+            background-color: lightgray;
+            /* 选中第 2 个子元素 */
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS 常用选择器示例</h1>
+
+    <!-- 基础选择器 -->
+    <p>这是一个段落，使用标签选择器。</p>
+    <p class="highlight">这是一个段落，使用类选择器。</p>
+    <p id="special">这是一个段落，使用 ID 选择器。</p>
+
+    <!-- 组合选择器 -->
+    <div>
+        <p>这是 <code>&lt;div&gt;</code> 内的段落，使用后代选择器。</p>
+        <p>这是 <code>&lt;div&gt;</code> 的直接子段落，使用子选择器。</p>
+        <span>
+            <p>这是 <code>&lt;div&gt;</code> 内的段落，但不是直接子元素。</p>
+        </span>
+    </div>
+
+    <!-- 伪类选择器 -->
+    <ul>
+        <li>第一个列表项</li>
+        <li>第二个列表项，使用 <code>:nth-child(2)</code></li>
+        <li>第三个列表项</li>
+    </ul>
+    <a href="#">悬停查看效果</a>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // 是否为回文
+        function rewind(a) {
+            // 分解
+            let Arr = a.split("");// 使用 "" 按每个字符分割字符串
+            // 反转
+            let reverseArr = Arr.reverse();
+            // 重组
+            let rewindWord = reverseArr.join("");// 使用 "" 去掉默认的逗号
+            // 对比·
+            if (a == rewindWord) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        let word = "aba";
+        console.log(rewind(word));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 函数声明示例</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>JavaScript 函数声明示例</h1>
+        <p>请输入您的名字，然后点击按钮获取问候语。</p>
+        <input type="text" id="nameInput" placeholder="输入您的名字">
+        <button onclick="displayGreeting()">显示问候语</button>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        // 函数声明
+        function greet(name) {
+            return `Hello, ${name}!`;
+        }
+
+        // 调用函数并显示结果
+        function displayGreeting() {
+            const nameInput = document.getElementById('nameInput').value.trim();
+            const resultDiv = document.getElementById('result');
+
+            if (nameInput) {
+                const greetingMessage = greet(nameInput);
+                resultDiv.textContent = greetingMessage;
+            } else {
+                resultDiv.textContent = "请输入一个名字！";
+            }
+        }
+    </script>
+</body>
+
+</html>

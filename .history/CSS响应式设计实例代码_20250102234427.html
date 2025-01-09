@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>响应式设计示例</title>
+
+    <style>
+
+        /* 默认样式 */
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            margin: 0;
+
+            padding: 0;
+
+            background-color: white;
+
+            color: black;
+
+            text-align: center;
+
+        }
+
+  
+
+        header {
+
+            background-color: #4caf50;
+
+            color: white;
+
+            padding: 20px;
+
+        }
+
+  
+
+        .container {
+
+            max-width: 800px;
+
+            margin: 20px auto;
+
+            padding: 20px;
+
+            border: 1px solid #ccc;
+
+            border-radius: 8px;
+
+            background-color: #f9f9f9;
+
+        }
+
+  
+
+        .box {
+
+            width: 45%;
+
+            margin: 10px;
+
+            padding: 20px;
+
+            background-color: #e6e6fa;
+
+            display: inline-block;
+
+            border-radius: 8px;
+
+        }
+
+  
+
+        footer {
+
+            margin-top: 20px;
+
+            padding: 10px;
+
+            background-color: #333;
+
+            color: white;
+
+        }
+
+  
+
+        /* 媒体查询：小屏幕（宽度小于等于 600px） */
+
+        @media (max-width: 600px) {
+
+            body {
+
+                background-color: lightblue;
+
+                color: white;
+
+            }
+
+  
+
+            header {
+
+                background-color: #3b7f3b;
+
+            }
+
+  
+
+            .container {
+
+                width: 90%;
+
+                padding: 10px;
+
+            }
+
+  
+
+            .box {
+
+                width: 100%;
+
+                /* 单列布局 */
+
+                margin: 10px 0;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+  
+
+<body>
+
+  
+
+    <header>
+
+        <h1>响应式设计示例</h1>
+
+    </header>
+
+  
+
+    <div class="container">
+
+        <h2>屏幕调整，样式随之变化</h2>
+
+        <p>将浏览器窗口缩小到小于 600px 以查看背景颜色和布局的变化。</p>
+
+        <div class="box">内容框 1</div>
+
+        <div class="box">内容框 2</div>
+
+    </div>
+
+  
+
+    <footer>
+
+        <p>这是一个简单的响应式设计示例。</p>
+
+    </footer>
+
+  
+
+</body>
+
+  
+
+</html>

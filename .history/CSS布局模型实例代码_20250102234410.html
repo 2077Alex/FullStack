@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS 布局示例</title>
+
+    <style>
+        /* 全局样式 */
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            margin: 0;
+
+            padding: 0;
+
+        }
+
+
+
+        /* 普通流布局示例 */
+
+        .normal-flow {
+
+            background-color: #f0f8ff;
+
+            padding: 20px;
+
+        }
+
+
+
+        .normal-flow p {
+
+            margin-bottom: 10px;
+
+        }
+
+
+
+        /* 浮动布局示例 */
+
+        .float-layout {
+
+            background-color: #e6e6fa;
+
+            overflow: hidden;
+
+            /* 清除浮动 */
+
+            padding: 20px;
+
+        }
+
+
+
+        .float-layout div {
+
+            width: 30%;
+
+            float: left;
+
+            margin-right: 3%;
+
+            padding: 10px;
+
+            background-color: #dcdcdc;
+
+            text-align: center;
+
+        }
+
+
+
+        .float-layout div:last-child {
+
+            margin-right: 0;
+
+            /* 去掉最后一个的右间距 */
+
+        }
+
+
+
+        /* Flexbox 布局示例 */
+
+        .flexbox-layout {
+
+            display: flex;
+
+            justify-content: space-around;
+
+            align-items: center;
+
+            background-color: #ffe4e1;
+
+            padding: 20px;
+
+        }
+
+
+
+        .flexbox-layout div {
+
+            width: 100px;
+
+            height: 100px;
+
+            background-color: #ffa07a;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            color: white;
+
+            font-weight: bold;
+
+            border-radius: 10px;
+
+        }
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+
+    <!-- 普通流布局 -->
+
+    <section class="normal-flow">
+
+        <h1>普通流布局</h1>
+
+        <p>这是段落1，按照默认的从上到下排列。</p>
+
+        <p>这是段落2，继续从上到下排列。</p>
+
+    </section>
+
+
+
+    <!-- 浮动布局 -->
+
+    <section class="float-layout">
+
+        <h1>浮动布局</h1>
+
+        <div>左边</div>
+
+        <div>中间</div>
+
+        <div>右边</div>
+
+    </section>
+
+
+
+    <!-- Flexbox 布局 -->
+
+    <section class="flexbox-layout">
+
+        <h1 style="width: 100%; text-align: center;">Flexbox 布局</h1>
+
+        <div>1</div>
+
+        <div>2</div>
+
+        <div>3</div>
+
+    </section>
+
+
+
+</body>
+
+
+
+</html>
